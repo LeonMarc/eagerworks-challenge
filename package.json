@@ -1,14 +1,17 @@
 {
   "name": "eagerworks-challenge",
   "version": "1.0.0",
+  "description": "QA Automation Challenge for Eagerworks using Playwright and Cucumber",
   "main": "index.js",
-  "scripts": {
-    "test": "cucumber-js --config cucumber.config.js"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "Leon Marcilla",
   "license": "ISC",
-  "description": "",
+  "scripts": {
+    "test": "cucumber-js --config cucumber.config.js",
+    "test:api": "npx playwright test tests/api/api.test.ts"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.7.0"
+  },
   "devDependencies": {
     "@cucumber/cucumber": "^11.2.0",
     "@cucumber/pretty-formatter": "^1.0.1",
@@ -17,8 +20,5 @@
     "playwright": "^1.52.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "@faker-js/faker": "^9.7.0"
   }
 }
